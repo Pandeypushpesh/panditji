@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पंडित निरंजन शास्त्री - पूजा, ज्योतिष, कर्मकांड सेवाएं</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <div class="nav-logo">
+                <span class="logo-text">पंडित निरंजन शास्त्री</span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-translate="nav.home">होम</a></li>
+                <li><a href="#about" class="nav-link" data-translate="nav.about">परिचय</a></li>
+                <li><a href="#services" class="nav-link" data-translate="nav.services">सेवाएं</a></li>
+                <li><a href="#appointment" class="nav-link" data-translate="nav.appointment">अपॉइंटमेंट</a></li>
+                <li><a href="#contact" class="nav-link" data-translate="nav.contact">संपर्क</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="lang-switch" id="langSwitch">EN</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+
+            <div class="hero-image-placeholder">
+                <div class="photo-placeholder">
+                    <img 
+                        src="images/pandit-ji-photo.png" 
+                        alt="पंडित निरंजन शास्त्री"
+                        class="pandit-photo"
+                        onerror="this.replaceWith(fallbackIcon())"
+                    >
+                </div>
+            </div>
+
+            <div class="hero-text">
+                <h1 class="hero-title" data-translate="home.heroTitle">
+                    पंडित जी की आध्यात्मिक सेवाओं में आपका स्वागत है
+                </h1>
+                <p class="hero-mantra" data-translate="home.heroMantra">ॐ नमो भगवते वासुदेवाय</p>
+                <p class="hero-subtitle" data-translate="home.heroSubtitle">
+                    आपके जीवन की यात्रा के लिए दिव्य आशीर्वाद
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#appointment" class="btn btn-primary" data-translate="home.bookNow">अभी बुक करें</a>
+                    <a href="#about" class="btn btn-secondary" data-translate="home.learnMore">और जानें</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="home.introTitle">पंडित निरंजन शास्त्री के बारे में</h2>
+            <p class="intro-text" data-translate="home.introText">16 वर्षों की समर्पित सेवा और वैदिक परंपराओं की गहरी जानकारी के साथ, पंडित निरंजन शास्त्री आपको जीवन में शांति, समृद्धि और सामंजस्य खोजने में मदद करने के लिए प्रामाणिक आध्यात्मिक मार्गदर्शन और पूजा सेवाएं प्रदान करते हैं।</p>
+        </div>
+    </section>
+
+    <!-- Popular Services Section -->
+    <section class="popular-services">
+        <div class="container">
+            <h2 class="section-title" data-translate="home.popularServices">लोकप्रिय सेवाएं</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🕉️</div>
+                    <h3 data-translate="services.puja.title">पूजा सेवाएं</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⭐</div>
+                    <h3 data-translate="services.astrology.title">ज्योतिष परामर्श</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📿</div>
+                    <h3 data-translate="services.japa.title">जप / अनुष्ठान</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💒</div>
+                    <h3 data-translate="services.marriage.title">विवाह पूजा</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#services" class="btn btn-primary" data-translate="home.learnMore">सभी सेवाएं देखें</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="about.title">पंडित निरंजन शास्त्री के बारे में</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">📅</div>
+                    <h3 data-translate="about.experience">वर्षों का अनुभव</h3>
+                    <p data-translate="about.experienceText">16 वर्षों से भक्तों की समर्पण और भक्ति के साथ सेवा</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3 data-translate="about.specialization">विशेषज्ञता</h3>
+                    <p data-translate="about.specializationText">वैदिक अनुष्ठान, ज्योतिष और आध्यात्मिक परामर्श में विशेषज्ञ</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📍</div>
+                    <h3 data-translate="about.location">स्थान</h3>
+                    <p data-translate="about.locationText">बरियातू, रांची, झारखंड</p>
+                </div>
+            </div>
+            <div class="why-choose">
+                <h3 class="why-title" data-translate="about.whyChoose">पंडित निरंजन शास्त्री को क्यों चुनें?</h3>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <h4 data-translate="about.why1">प्रामाणिक वैदिक ज्ञान</h4>
+                        <p data-translate="about.why1Text">प्राचीन शास्त्रों और परंपराओं की गहरी समझ</p>
+                    </div>
+                    <div class="why-item">
+                        <h4 data-translate="about.why2">व्यक्तिगत मार्गदर्शन</h4>
+                        <p data-translate="about.why2Text">आपकी विशिष्ट आवश्यकताओं के लिए अनुकूलित समाधान</p>
+                    </div>
+                    <div class="why-item">
+                        <h4 data-translate="about.why3">अनुभवी और विश्वसनीय</h4>
+                        <p data-translate="about.why3Text">वर्षों का अनुभव, परिवारों की समर्पण के साथ सेवा</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="services.title">हमारी सेवाएं</h2>
+            <p class="section-subtitle" data-translate="services.subtitle">व्यापक आध्यात्मिक समाधान</p>
+            <div class="services-grid-full">
+                <div class="service-card-full">
+                    <div class="service-icon-large">🕉️</div>
+                    <h3 data-translate="services.puja.title">पूजा सेवाएं</h3>
+                    <p data-translate="services.puja.description">सभी अवसरों और त्योहारों के लिए पारंपरिक पूजा समारोह</p>
+                </div>
+                <div class="service-card-full">
+                    <div class="service-icon-large">⭐</div>
+                    <h3 data-translate="services.astrology.title">ज्योतिष परामर्श</h3>
+                    <p data-translate="services.astrology.description">विस्तृत कुंडली विश्लेषण और ज्योतिषीय मार्गदर्शन</p>
+                </div>
+                <div class="service-card-full">
+                    <div class="service-icon-large">📜</div>
+                    <h3 data-translate="services.karmkand.title">कर्मकांड</h3>
+                    <p data-translate="services.karmkand.description">वैदिक परंपराओं के अनुसार अनुष्ठान समारोह और धार्मिक संस्कार</p>
+                </div>
+                <div class="service-card-full">
+                    <div class="service-icon-large">📿</div>
+                    <h3 data-translate="services.japa.title">जप / अनुष्ठान</h3>
+                    <p data-translate="services.japa.description">विशिष्ट उद्देश्यों के लिए मंत्र जाप और आध्यात्मिक प्रथाएं</p>
+                </div>
+                <div class="service-card-full">
+                    <div class="service-icon-large">💒</div>
+                    <h3 data-translate="services.marriage.title">विवाह पूजा</h3>
+                    <p data-translate="services.marriage.description">पूर्ण विवाह समारोह और विवाह संबंधी अनुष्ठान</p>
+                </div>
+                <div class="service-card-full">
+                    <div class="service-icon-large">🌙</div>
+                    <h3 data-translate="services.grahDosh.title">ग्रह दोष / पारिवारिक समस्याएं</h3>
+                    <p data-translate="services.grahDosh.description">ग्रह दोषों के लिए उपचार और पारिवारिक सामंजस्य समाधान</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="appointment.title">अपॉइंटमेंट बुक करें</h2>
+            <p class="section-subtitle" data-translate="appointment.subtitle">अपनी परामर्श निर्धारित करने के लिए नीचे दिया गया फॉर्म भरें</p>
+            <form class="appointment-form" id="appointmentForm">
+                <div class="form-group">
+                    <label for="name" data-translate="appointment.name">पूरा नाम</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" data-translate="appointment.phone">फोन नंबर</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-translate="appointment.email">ईमेल पता</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="service" data-translate="appointment.service">आवश्यक सेवा</label>
+                    <select id="service" name="service" required>
+                        <option value="" data-translate="appointment.selectService">एक सेवा चुनें</option>
+                        <option value="puja" data-translate="services.puja.title">पूजा सेवाएं</option>
+                        <option value="astrology" data-translate="services.astrology.title">ज्योतिष परामर्श</option>
+                        <option value="karmkand" data-translate="services.karmkand.title">कर्मकांड</option>
+                        <option value="japa" data-translate="services.japa.title">जप / अनुष्ठान</option>
+                        <option value="marriage" data-translate="services.marriage.title">विवाह पूजा</option>
+                        <option value="grahDosh" data-translate="services.grahDosh.title">ग्रह दोष / पारिवारिक समस्याएं</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date" data-translate="appointment.date">पसंदीदा तारीख</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-translate="appointment.message">संदेश (वैकल्पिक)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit" data-translate="appointment.submit">अनुरोध सबमिट करें</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact.title">संपर्क करें</h2>
+            <p class="section-subtitle" data-translate="contact.subtitle">आध्यात्मिक मार्गदर्शन के लिए संपर्क करें</p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3 data-translate="contact.address">पता</h3>
+                    <p data-translate="contact.addressText">बरियातू, रांची, झारखंड, भारत</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3 data-translate="contact.phone">फोन</h3>
+                    <p><a href="tel:+918434745454" class="contact-link">+91 8434745454</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h3 data-translate="contact.email">ईमेल</h3>
+                    <p><a href="mailto:niranjanpandey72017@gmail.com" class="contact-link">niranjanpandey72017@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text" data-translate="footer.text">© 2024 पंडित निरंजन शास्त्री आध्यात्मिक सेवाएं। सभी अधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fallback icon for broken image
+        function fallbackIcon() {
+            const div = document.createElement("div");
+            div.className = "fallback-icon";
+            div.innerHTML = "🕉️";
+            return div;
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

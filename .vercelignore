@@ -1,0 +1,12 @@
+node_modules
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+.vscode
+.idea
+check-env.js
+TROUBLESHOOTING.md
+ENV_SETUP_GUIDE.md
+

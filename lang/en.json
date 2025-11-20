@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Pandit Niranjan Shastri",
+    "services": "Services",
+    "appointment": "Book Appointment",
+    "contact": "Contact"
+  },
+  "home": {
+    "heroTitle": "Welcome to Pandit Niranjan Shastri's Spiritual Services",
+    "heroMantra": "ॐ नमो भगवते वासुदेवाय",
+    "heroSubtitle": "Divine Blessings for Your Life's Journey",
+    "introTitle": "About Pandit Niranjan Shastri",
+    "introText": "With 16 years of dedicated service and deep knowledge of Vedic traditions, Pandit Niranjan Shastri provides authentic spiritual guidance and puja services to help you find peace, prosperity, and harmony in life.",
+    "popularServices": "Popular Services",
+    "bookNow": "Book Now",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "title": "About Pandit Niranjan Shastri",
+    "experience": "Years of Experience",
+    "experienceText": "Serving devotees with dedication and devotion for 16 years",
+    "specialization": "Specialization",
+    "specializationText": "Expert in Vedic rituals, astrology, and spiritual consultations",
+    "location": "Location",
+    "locationText": "Based in Bariatu, Ranchi, Jharkhand",
+    "whyChoose": "Why Choose Pandit Niranjan Shastri?",
+    "why1": "Authentic Vedic Knowledge",
+    "why1Text": "Deep understanding of ancient scriptures and traditions",
+    "why2": "Personalized Guidance",
+    "why2Text": "Tailored solutions for your specific needs",
+    "why3": "Experienced & Trusted",
+    "why3Text": "Years of experience serving families with dedication"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Spiritual Solutions",
+    "puja": {
+      "title": "Puja Services",
+      "description": "Traditional puja ceremonies for all occasions and festivals"
+    },
+    "astrology": {
+      "title": "Astrology Consultation",
+      "description": "Detailed horoscope analysis and astrological guidance"
+    },
+    "karmkand": {
+      "title": "Karmkand",
+      "description": "Ritual ceremonies and religious rites as per Vedic traditions"
+    },
+    "japa": {
+      "title": "Japa / Anushthan",
+      "description": "Mantra chanting and spiritual practices for specific purposes"
+    },
+    "marriage": {
+      "title": "Marriage (Vivah Puja)",
+      "description": "Complete wedding ceremonies and marriage-related rituals"
+    },
+    "grahDosh": {
+      "title": "Grah Dosh / Family Issues",
+      "description": "Remedies for planetary doshas and family harmony solutions"
+    }
+  },
+  "appointment": {
+    "title": "Book an Appointment",
+    "subtitle": "Fill the form below to schedule your consultation",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "service": "Service Needed",
+    "date": "Preferred Date",
+    "message": "Message (Optional)",
+    "submit": "Submit Request",
+    "selectService": "Select a service",
+    "success": "Thank you! Your appointment request has been submitted.",
+    "error": "Something went wrong. Please try again."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch for spiritual guidance",
+    "address": "Address",
+    "addressText": "Bariatu, Ranchi, Jharkhand, India",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "footer": {
+    "text": "© 2024 Pandit Ji Spiritual Services. All rights reserved."
+  }
+}
+
