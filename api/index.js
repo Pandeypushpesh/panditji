@@ -1,5 +1,8 @@
 // Vercel serverless function
-const app = require('../server');
+const app = require('../server.js');
 
-module.exports = app;
+// Export as handler for Vercel
+module.exports = (req, res) => {
+  return app(req, res);
+};
 

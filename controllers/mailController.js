@@ -1,5 +1,14 @@
 const nodemailer = require('nodemailer');
 
+const SERVICE_LABELS = {
+  puja: 'पूजा सेवाएं',
+  astrology: 'ज्योतिष परामर्श',
+  karmkand: 'कर्मकांड',
+  japa: 'जप / अनुष्ठान',
+  marriage: 'विवाह पूजा',
+  grahDosh: 'ग्रह दोष / पारिवारिक समस्याएं'
+};
+
 // Create transporter using environment variables
 const createTransporter = () => {
   return nodemailer.createTransport({
@@ -70,11 +79,13 @@ const sendMail = async (req, res) => {
     // Verify transporter configuration
     await transporter.verify();
 
-    // Email content
-    const mailOptions = {
+    const serviceLabel = SERVICE_LABELS[service] || service;
+
+    // Email content for admin
+    const adminMailOptions = {
       from: `"Pandit Ji Website" <${process.env.SMTP_USER}>`,
       to: process.env.RECEIVER_EMAIL,
-      subject: `New Appointment Request - ${service}`,
+      subject: `New Appointment Request - ${serviceLabel}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #FF6B35; background: #FFF8E1; padding: 15px; border-radius: 5px;">
@@ -96,7 +107,7 @@ const sendMail = async (req, res) => {
               </tr>
               <tr style="background: #FFF8E1;">
                 <td style="padding: 10px; font-weight: bold; color: #8B4513;">सेवा / Service:</td>
-                <td style="padding: 10px;">${service}</td>
+                <td style="padding: 10px;">${serviceLabel}</td>
               </tr>
               <tr>
                 <td style="padding: 10px; font-weight: bold; color: #8B4513;">तारीख / Date:</td>
@@ -122,14 +133,55 @@ New Appointment Request
 Name: ${name}
 Phone: ${phone}
 Email: ${email}
-Service: ${service}
+Service: ${serviceLabel}
 Date: ${date}
 Message: ${message || 'N/A'}
       `
     };
 
-    // Send email
-    const info = await transporter.sendMail(mailOptions);
+    // Send email to admin
+    const info = await transporter.sendMail(adminMailOptions);
+
+    // Prepare धन्यवाद email for user
+    const thankYouMailOptions = {
+      from: `"Pandit निरंजन शास्त्री" <${process.env.SMTP_USER}>`,
+      to: email,
+      subject: 'धन्यवाद - आपका अपॉइंटमेंट अनुरोध प्राप्त हो गया है',
+      html: `
+        <div style="font-family: 'Noto Sans Devanagari', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #FFF8E1; border-radius: 10px; padding: 24px;">
+          <h2 style="color: #8B4513; margin-bottom: 16px;">प्रिय ${name},</h2>
+          <p style="color: #2C2C2C; line-height: 1.6; margin-bottom: 16px;">
+            आपके द्वारा पंडित निरंजन शास्त्री जी की सेवाओं के लिए भरोसा जताने के लिए हृदय से धन्यवाद। हमें आपका अनुरोध प्राप्त हो गया है।
+          </p>
+          <div style="background:#FFFFFF; border-radius: 8px; padding: 16px; border:1px solid #FFE0B2; margin-bottom:16px;">
+            <p style="margin:0; color:#8B4513; font-weight:600;">आवश्यक सेवा:</p>
+            <p style="margin:4px 0 0 0; color:#2C2C2C;">${serviceLabel}</p>
+            <p style="margin:12px 0 0 0; color:#8B4513; font-weight:600;">पसंदीदा तारीख:</p>
+            <p style="margin:4px 0 0 0; color:#2C2C2C;">${date}</p>
+          </div>
+          <p style="color: #2C2C2C; line-height: 1.6;">
+            जल्द ही आपको हमारी टीम की ओर से कॉल या ईमेल प्राप्त होगा। यदि यह अत्यावश्यक है, तो कृपया सीधे हमें कॉल करें।
+          </p>
+          <p style="margin-top: 24px; color: #8B4513; font-weight: 600;">शुभेच्छा सहित,<br>पंडित निरंजन शास्त्री</p>
+          <p style="margin-top: 16px; font-size: 0.9rem; color: #666666;">यह एक स्वचालित संदेश है। कृपया इस ईमेल का उत्तर न दें।</p>
+        </div>
+      `,
+      text: `प्रिय ${name},
+
+आपका अपॉइंटमेंट अनुरोध प्राप्त हो गया है। जल्द ही हमारी टीम आपसे संपर्क करेगी।
+
+सेवा: ${serviceLabel}
+पसंदीदा तारीख: ${date}
+
+धन्यवाद,
+पंडित निरंजन शास्त्री`
+    };
+
+    try {
+      await transporter.sendMail(thankYouMailOptions);
+    } catch (thankYouError) {
+      console.error('Error sending thank you email:', thankYouError);
+    }
 
     // Success response
     res.status(200).json({
