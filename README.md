@@ -1,3 +1,5 @@
+link :- nkpastro.vercel.app
+
 # पंडित जी आध्यात्मिक सेवाएं | Pandit Ji Spiritual Services Website
 
 एक पूर्ण रूप से responsive वेबसाइट जो Ranchi स्थित Pandit Ji की आध्यात्मिक सेवाओं के लिए बनाई गई है।
